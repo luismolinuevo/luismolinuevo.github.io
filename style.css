@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&display=swap');
+@import "stylemedia.css";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;  /*adds smooth scrool effect. For example when I click a different section is will scroll instead of just going to it*/
+  }
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header {  /*having the nav and home in header fixed my issues*/
+    color:white;
+    background-image: url(/bg.jpg);
+    background-position: center/center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;  /*fixed white space issues*/
+}
+
+.container {
+    padding: 30px 90px;  /*this gives everything space on the side and top/bottom. Im using padding because margin was giving me alot of extra white space.*/
+}
+
+.heading {
+    color:#cc3300;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/*Nav bar*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;  /*put the navs next to each other. since display flex is set things default*/
+}
+
+nav .menu li {
+    list-style: none;
+}
+
+nav .menu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.2s ease;
+    white-space: nowrap;  /* Before the me in about me and contact me was wraping and this stops that*/
+}
+
+nav .menu li a:hover {
+    border-bottom: 3px solid #cc3300;
+}
+
+nav .menu .nav-white:hover {
+    border-bottom: 3px solid white;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav .hamburger {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .menu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.span {
+    color: #cc3300;
+}
+
+.hero {
+    padding-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero .hello{
+    color:#cc3300;
+    padding-bottom: 10px;
+    font-size:25px;
+}
+
+.hero h1 {
+    font-size: 70px;
+}
+
+.hero .aweb {
+    font-size: 25px;
+}
+
+.home-img {
+    height: 700px;
+
+}
+
+.mouse {
+    font-size: 35px;
+    opacity: .7;
+}
+
+/*About Me*/
+
+.about-me {
+    height: auto;  /*was 100vh before my have to change if im having issues. But for now its good because it makes the about me section look better on reponsive mode*/
+    width: 100%;
+    background-color: black;
+    padding: 20px 0px;
+}
+
+#img2 {
+    width: 600px;
+    height: 635px;
+    padding-left: 50px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    color:white;
+}
+
+.about-me h1 {
+    color:#cc3300;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+.about p{
+    font-size: 25px;
+}
+
+/*Skills*/
+
+.skills {
+    padding: 20px 0px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.skills h3 {
+    color:#cc3300;
+    font-size: 35px;
+}
+
+.skillscontain {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 30px;
+}
+
+/*Projects*/
+
+.projects {
+    height: auto;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: black;
+}
+
+.project-container h3{
+    color:#cc3300;
+    padding: 5px;
+}
+
+.project-container p{
+    color:white;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*makes it wrap on smaller screens*/
+    box-sizing: border-box;
+}
+
+.project-div {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    /* border: 1px solid black; */
+    border: 1px solid white;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;  /*makes border corner circle*/
+    /* background: linear-gradient(to top, rgb(255, 45, 45) 50%, white 50%); */
+    background-size: 100% 200%;
+}
+
+
+/*Contact Me*/
+
+.contact-me {
+    height: auto;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: auto; /*puts it in center*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input {
+    height: 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 600px;
+}
+
+#message {
+    height: 170px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 600px;
+}
+
+#submit {
+    width: 80px;
+    padding: 20px;
+    margin: auto;
+    background-color: #cc3300;
+    color: white;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*footer*/
+
+footer {
+    background-color: black;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color:#cc3300;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.social {
+    font-size: 25px;
+    color: #cc3300;
+}
+
+
+
+
+/*
+
+Ideas 
+
+-add blinking effect to |
+-make the hamburger menu fixed.
+
+
+
+
+Things to do before I finish
+
+-find a way to clean up code because I feel that I have a lot of useless code
+*/
